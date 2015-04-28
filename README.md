@@ -7,10 +7,8 @@ Test : 테스트 메소드(Microsoft.VisualStudio.TestTools.UnitTesting 에선 T
 ExpectedException : 제대로된 예외가 발생하는지 검사<br>
 Ignore : 테스트 무시<br>
 Category : 테스트의 카테고리 설정(Microsoft.VisualStudio.TestTools.UnitTesting 에선 TestCategory)<br>
-<br>
 <h3>Class</h3>
 Assert : 실제 객체나 값이 기대하는 것과 동일한지 검사하는 클래스
-
 <h3>의존성을 분리하는 기법</h3>
 <ul>
   <li>하부 구현을 교체할 수 있도록 인터페이스 추출</li>
