@@ -1,6 +1,4 @@
-# TestDrivenStudy<br>
-<h1>테스트 주도개발 연습</h1>
-
+# 테스트 주도개발 연습
 <h2>1~2장</h2>
 <h3>Attribute</h3>
 SetUp : 테스트를 위한 설정값 초기화(Microsoft.VisualStudio.TestTools.UnitTesting 에선 TestInitialize)<br>
