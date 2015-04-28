@@ -8,17 +8,21 @@ namespace UnitTestStart_Chapter2
 {
     public class LogAnalyzer
     {
+        private bool wasLastFileNameValid;
+
+        public bool WasLastFileNameVald
+        {
+            get { return wasLastFileNameValid; }
+            set { wasLastFileNameValid = value; }
+        }
         public bool IsValidLogFileName(string fileName)
         {
-            if(String.IsNullOrEmpty(fileName))
+            if (!fileName.ToLower().EndsWith(".slf"))
             {
-                throw new ArgumentException("파일 이름이 없음!");
-            }
-
-            if (!fileName.EndsWith(".SLF"))
-            {
+                wasLastFileNameValid = false;
                 return false;
             }
+            wasLastFileNameValid = true;
             return true;
         }
     }

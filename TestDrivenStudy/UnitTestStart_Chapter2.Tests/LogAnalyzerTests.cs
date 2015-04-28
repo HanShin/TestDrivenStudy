@@ -51,6 +51,14 @@ namespace UnitTestStart_Chapter2.Tests
             // ...
         }
 
+        [TestMethod]
+        public void IsValidLogFileName_ValdNAme_RemembersTrue()
+        {
+            LogAnalyzer log = new LogAnalyzer();
+            log.IsValidLogFileName("somefile.slf");
+            Assert.IsTrue(log.WasLastFileNameVald);
+        }
+
         [TestCleanup]
         public void TearDown()
         {
