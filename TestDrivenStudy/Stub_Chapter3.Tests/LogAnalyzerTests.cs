@@ -13,9 +13,8 @@ namespace Stub_Chapter3.Tests
             myFakeManager.ShouldExtensionBeValid = true;
 
             // Analyzer 생성 및 스텁 주입
-            LogAnalyzer log = new LogAnalyzer(myFakeManager);
-
-            // 확장자 지원 확인 로직에 대한 assert
+            LogAnalyzer log = new LogAnalyzer();
+            log.ExtensionManager = myFakeManager;
             bool result = log.IsValidLogFileName("short.ext");
             Assert.IsFalse(result, "지원되는 확장자라 하더라도 파일명이 다섯 글자 미만이면 안됨");
         }

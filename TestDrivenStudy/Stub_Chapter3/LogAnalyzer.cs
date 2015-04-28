@@ -15,10 +15,12 @@ namespace Stub_Chapter3
             manager = new FileExtensionManager();
         }
 
-        public LogAnalyzer(IExtensionManager mgr)
+        public IExtensionManager ExtensionManager 
         {
-            manager = mgr;
+            get { return manager; }
+            set { manager = value; }
         }
+
         public bool IsValidLogFileName(string fileName)
         {
             return manager.IsValid(fileName);
