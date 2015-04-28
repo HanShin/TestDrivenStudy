@@ -37,6 +37,14 @@ namespace UnitTestStart_Chapter2.Tests
             Assert.IsTrue(result, "파일 이름이 적절하지 않음!");
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "파일 이름이 없음!")]
+        public void IsValidFileName_EmptyFileName_ThrowsException()
+        {
+            m_analyers.IsValidLogFileName(string.Empty);
+        }
+
+
         [TestCleanup]
         public void TearDown()
         {

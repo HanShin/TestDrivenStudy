@@ -10,7 +10,12 @@ namespace UnitTestStart_Chapter2
     {
         public bool IsValidLogFileName(string fileName)
         {
-            if (!fileName.ToLower().EndsWith(".slf"))
+            if(String.IsNullOrEmpty(fileName))
+            {
+                throw new ArgumentException("파일 이름이 없음!");
+            }
+
+            if (!fileName.EndsWith(".SLF"))
             {
                 return false;
             }
