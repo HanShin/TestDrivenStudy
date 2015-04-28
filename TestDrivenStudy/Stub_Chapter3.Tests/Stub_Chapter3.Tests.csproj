@@ -53,6 +53,7 @@
     <Compile Include="LogAnalyzerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StubExtensionManager.cs" />
+    <Compile Include="TestableLogAnalyzer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stub_Chapter3\Stub_Chapter3.csproj">
