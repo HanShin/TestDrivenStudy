@@ -43,8 +43,9 @@ namespace UnitTestStart_Chapter2.Tests
         {
             m_analyers.IsValidLogFileName(string.Empty);
         }
+
         [TestMethod]
-        [Ignore] // 이 테스트에는 문제가 있소
+        [TestCategory("Fast Tests(빠른 테스트)")]
         public void IsValidFileName_ValidFie_ReturnsTrue()
         {
             // ...
