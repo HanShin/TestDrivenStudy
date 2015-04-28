@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stub_Chapter3
 {
-    public class FileExtensionManager
+    public class FileExtensionManager : IExtensionManager
     {
         public bool IsValid(string fileName)
         {

@@ -10,7 +10,7 @@ namespace Stub_Chapter3
     {
         public bool IsValidLogFileName(string fileName)
         {
-            FileExtensionManager mgr = new FileExtensionManager();
+            IExtensionManager mgr = new FileExtensionManager();
             return mgr.IsValid(fileName);
         }
     }
