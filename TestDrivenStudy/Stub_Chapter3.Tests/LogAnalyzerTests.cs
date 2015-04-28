@@ -12,6 +12,8 @@ namespace Stub_Chapter3.Tests
             StubExtensionManager myFakeManager = new StubExtensionManager();
             myFakeManager.ShouldExtensionBeValid = true;
 
+            ExtensionManagerFactory.SetManager(myFakeManager);
+
             // Analyzer 생성 및 스텁 주입
             LogAnalyzer log = new LogAnalyzer();
             log.ExtensionManager = myFakeManager;

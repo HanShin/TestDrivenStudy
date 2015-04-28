@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Stub_Chapter3
 
         public LogAnalyzer()
         {
-            manager = new FileExtensionManager();
+            manager = ExtensionManagerFactory.Create();
         }
 
         public IExtensionManager ExtensionManager 
@@ -23,7 +24,7 @@ namespace Stub_Chapter3
 
         public bool IsValidLogFileName(string fileName)
         {
-            return manager.IsValid(fileName);
+            return manager.IsValid(fileName) && Path.GetFileNameWithoutExtension(fileName).Length > 5;
         }
     }
 }
