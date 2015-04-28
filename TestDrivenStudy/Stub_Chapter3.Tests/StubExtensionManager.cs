@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stub_Chapter3
+namespace Stub_Chapter3.Tests
 {
-    public class FileExtensionManager : IExtensionManager
+    internal class StubExtensionManager : IExtensionManager
     {
+        public bool ShouldExtensionBeValid;
+
         public bool IsValid(string fileName)
         {
-            return true;
+            return ShouldExtensionBeValid;
         }
     }
 }

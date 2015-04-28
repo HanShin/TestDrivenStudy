@@ -8,10 +8,20 @@ namespace Stub_Chapter3
 {
     public class LogAnalyzer
     {
+        private IExtensionManager manager;
+
+        public LogAnalyzer()
+        {
+            manager = new FileExtensionManager();
+        }
+
+        public LogAnalyzer(IExtensionManager mgr)
+        {
+            manager = mgr;
+        }
         public bool IsValidLogFileName(string fileName)
         {
-            IExtensionManager mgr = new FileExtensionManager();
-            return mgr.IsValid(fileName);
+            return manager.IsValid(fileName);
         }
     }
 }
