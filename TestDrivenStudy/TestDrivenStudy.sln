@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockObject_Chapter4.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFramework_Chapter5", "IsolationFramework_Chapter5\IsolationFramework_Chapter5.csproj", "{A30DB707-EE2B-48DD-978D-0830EF382BCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFramework_Chapter5.Tests", "IsolationFramework_Chapter5.Tests\IsolationFramework_Chapter5.Tests.csproj", "{78DD9EC2-4AA1-43C9-BC33-56ABBDC0F62B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{A30DB707-EE2B-48DD-978D-0830EF382BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A30DB707-EE2B-48DD-978D-0830EF382BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A30DB707-EE2B-48DD-978D-0830EF382BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DD9EC2-4AA1-43C9-BC33-56ABBDC0F62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DD9EC2-4AA1-43C9-BC33-56ABBDC0F62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DD9EC2-4AA1-43C9-BC33-56ABBDC0F62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DD9EC2-4AA1-43C9-BC33-56ABBDC0F62B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

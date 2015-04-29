@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IComplicatedInteface.cs" />
+    <Compile Include="IWebService.cs" />
+    <Compile Include="LogAnalyzer.cs" />
     <Compile Include="MyTestableComplicatedInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
