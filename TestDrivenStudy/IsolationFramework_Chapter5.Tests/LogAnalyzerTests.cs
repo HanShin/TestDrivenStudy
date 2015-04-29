@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MockObject_Chapter5;
+using Rhino.Mocks;
 
 namespace IsolationFramework_Chapter5.Tests
 {
@@ -10,11 +11,16 @@ namespace IsolationFramework_Chapter5.Tests
         [TestMethod]
         public void Analyze_TooShortFileName_CallsWebService()
         {
-            ManualMockService mockService = new ManualMockService();
-            LogAnalyzer log = new LogAnalyzer(mockService);
+            MockRepository mocks = new MockRepository();
+            IWebService simulatedService = mocks.StrictMock<IWebService>();
+            using(mocks.Record())
+            {
+                simulatedService.LogError("Filename too short : abc.ext");
+            }
+            LogAnalyzer log = new LogAnalyzer(simulatedService);
             string tooShortFileName = "abc.ext";
             log.Analyze(tooShortFileName);
-            Assert.AreEqual("Filename too short : abc.ext", mockService.LastError);
+            mocks.Verify(simulatedService);
         }
     }
 }
