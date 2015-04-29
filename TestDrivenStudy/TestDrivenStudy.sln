@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stub_Chapter3", "Stub_Chapt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stub_Chapter3.Tests", "Stub_Chapter3.Tests\Stub_Chapter3.Tests.csproj", "{E900222A-6E90-443E-8338-67D7FD1164F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockObject_Chapter4", "MockObject_Chapter4\MockObject_Chapter4.csproj", "{13ACAA1C-3A0A-4C02-9A13-11086F820B26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockObject_Chapter4.Tests", "MockObject_Chapter4.Tests\MockObject_Chapter4.Tests.csproj", "{F7B34B98-4A13-488B-B639-CC2AC27A9C58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{E900222A-6E90-443E-8338-67D7FD1164F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E900222A-6E90-443E-8338-67D7FD1164F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E900222A-6E90-443E-8338-67D7FD1164F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13ACAA1C-3A0A-4C02-9A13-11086F820B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13ACAA1C-3A0A-4C02-9A13-11086F820B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13ACAA1C-3A0A-4C02-9A13-11086F820B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13ACAA1C-3A0A-4C02-9A13-11086F820B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B34B98-4A13-488B-B639-CC2AC27A9C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B34B98-4A13-488B-B639-CC2AC27A9C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B34B98-4A13-488B-B639-CC2AC27A9C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B34B98-4A13-488B-B639-CC2AC27A9C58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
