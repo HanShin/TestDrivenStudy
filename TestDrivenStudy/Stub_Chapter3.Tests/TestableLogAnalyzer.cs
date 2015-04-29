@@ -14,5 +14,12 @@ namespace Stub_Chapter3.Tests
         {
             return Manager;
         }
+
+        public bool IsSupported;
+
+        protected override bool IsValid(string fileName)
+        {
+            return IsSupported;
+        }
     }
 }

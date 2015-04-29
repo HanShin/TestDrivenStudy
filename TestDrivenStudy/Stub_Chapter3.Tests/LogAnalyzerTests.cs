@@ -20,5 +20,14 @@ namespace Stub_Chapter3.Tests
             bool result = log.IsValidLogFileName("short.ext");
             Assert.IsFalse(result, "지원되는 확장자라 하더라도 파일명이 다섯 글자 미만이면 안됨");
         }
+
+        [TestMethod]
+        public void overrideTestWithoutStub()
+        {
+            TestableLogAnalyzer log = new TestableLogAnalyzer();
+            log.IsSupported = true;
+            bool result = log.IsValidLogFileName("file.ext");
+            Assert.IsFalse(result, "....");
+        }
     }
 }

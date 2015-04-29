@@ -10,9 +10,14 @@ namespace Stub_Chapter3
     {
         public bool IsValidLogFileName(string fileName)
         {
-            return GetManager().IsValid(fileName);
+            int len = fileName.Length;
+            return this.IsValid(fileName) && len > 5;
         }
-
+        protected virtual bool IsValid(string fileName)
+        {
+            FileExtensionManager mgr = new FileExtensionManager();
+            return mgr.IsValid(fileName);
+        }
         protected virtual IExtensionManager GetManager()
         {
             return new FileExtensionManager();
