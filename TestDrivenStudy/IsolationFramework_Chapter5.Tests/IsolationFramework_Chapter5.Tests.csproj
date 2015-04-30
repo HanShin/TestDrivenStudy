@@ -56,6 +56,7 @@
     <Compile Include="LogAnalyzer2Tests.cs" />
     <Compile Include="LogAnalyzerTests.cs" />
     <Compile Include="ManualMockService.cs" />
+    <Compile Include="MockEmailService.cs" />
     <Compile Include="MockService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StubService.cs" />
