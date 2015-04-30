@@ -34,5 +34,22 @@ namespace MockObject_Chapter5.Tests
 
             mocks.VerifyAll();
         }
+
+        public void SimpleStringConstraints()
+        {
+            MockRepository mocks = new MockRepository();
+            IWebService mockService = mocks.CreateMock<IWebService>();
+
+            using (mocks.Record())
+            {
+                mockService.LogError("무시된 문자열");
+                LastCall.Constraints(new Contains("abc"));
+            }
+
+            mockService.LogError(Guid.NewGuid() + "abc");
+            mocks.VerifyAll();
+
+        }
+
     }
 }
