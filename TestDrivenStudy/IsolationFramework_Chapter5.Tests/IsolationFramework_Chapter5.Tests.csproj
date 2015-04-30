@@ -58,6 +58,7 @@
     <Compile Include="ManualMockService.cs" />
     <Compile Include="MockEmailService.cs" />
     <Compile Include="MockService.cs" />
+    <Compile Include="PresenterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StubService.cs" />
   </ItemGroup>
