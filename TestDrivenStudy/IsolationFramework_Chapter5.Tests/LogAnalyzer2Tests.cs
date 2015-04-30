@@ -34,7 +34,7 @@ namespace MockObject_Chapter5.Tests
 
             mocks.VerifyAll();
         }
-
+        [TestMethod]
         public void SimpleStringConstraints()
         {
             MockRepository mocks = new MockRepository();
