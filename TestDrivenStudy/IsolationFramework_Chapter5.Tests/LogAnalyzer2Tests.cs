@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Rhino.Mocks;
+using Rhino.Mocks.Constraints;
 
 namespace MockObject_Chapter5.Tests
 {
@@ -9,21 +11,28 @@ namespace MockObject_Chapter5.Tests
         [TestMethod]
         public void Analyze_WebServiceThrows_SendsEmail()
         {
-            StubService stubService = new StubService();
-            stubService.ToThrow = new Exception("fake exception");
+            MockRepository mocks = new MockRepository();
+            IWebService stubService = mocks.Stub<IWebService>();
 
-            MockEmailService mockEmail = new MockEmailService();
+            IEmailService mockEmail = mocks.StrictMock<IEmailService>();
+
+            using (mocks.Record())
+            {
+                stubService.LogError("aaa");
+                LastCall.Constraints(Is.Anything());
+                LastCall.Throw(new Exception("가짜 예외"));
+
+                mockEmail.SendEmail("a","subject","가짜 예외");
+            }
 
             LogAnalyzer2 log = new LogAnalyzer2();
-
             log.Service = stubService;
             log.Email = mockEmail;
 
             string tooShortFileName = "abc.ext";
             log.Analyze(tooShortFileName);
-            Assert.AreEqual("a",mockEmail.To);
-            Assert.AreEqual("fake exception",mockEmail.Body);
-            Assert.AreEqual("subject",mockEmail.Subject);
+
+            mocks.VerifyAll();
         }
     }
 }
