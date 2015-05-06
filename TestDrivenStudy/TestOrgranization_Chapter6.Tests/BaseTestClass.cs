@@ -10,7 +10,7 @@ namespace TestOrgranization_Chapter6.Tests
     public class BaseTestClass
     {
         [TestInitialize]
-        public void SetUp()
+        public virtual void SetUp()
         {
             Console.WriteLine("in setup");
             LoggingFacility.Logger = new StubLogger();

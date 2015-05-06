@@ -6,6 +6,15 @@ namespace TestOrgranization_Chapter6.Tests
     [TestClass]
     public class ConfigurationManagerTests : BaseTestClass
     {
+        [TestInitialize]
+        public override void SetUp()
+        {
+            base.SetUp();
+            Console.WriteLine("in derived");
+            LoggingFacility.Logger = new StubLogger();
+         
+        }
+
         [TestMethod]
         public void Analyze_Empty_ThrowsException()
         {
