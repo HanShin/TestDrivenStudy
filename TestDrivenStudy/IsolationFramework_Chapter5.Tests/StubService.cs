@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MockObject_Chapter5
+namespace IsolationFramework_Chapter5.Tests
 {
     public class StubService : IWebService
     {
@@ -14,6 +14,16 @@ namespace MockObject_Chapter5
         public void LogError(string message)
         {
             throw ToThrow;
+        }
+
+        #endregion
+
+        #region IWebService Members
+
+
+        public void LogInfo(string log)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

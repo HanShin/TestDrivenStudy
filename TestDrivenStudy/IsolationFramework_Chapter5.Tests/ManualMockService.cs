@@ -14,5 +14,15 @@ namespace IsolationFramework_Chapter5.Tests
         }
 
         #endregion
+
+        #region IWebService Members
+
+
+        public void LogInfo(string log)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
     }
 }

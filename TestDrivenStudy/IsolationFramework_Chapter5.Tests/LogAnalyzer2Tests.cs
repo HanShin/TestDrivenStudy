@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Rhino.Mocks;
 using Rhino.Mocks.Constraints;
+using IsolationFramework_Chapter5;
 
 namespace MockObject_Chapter5.Tests
 {

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MockObject_Chapter5
+namespace IsolationFramework_Chapter5
 {
     public interface IWebService
     {
         void LogError(string message);
+        void LogInfo(string log);
     }
 }
