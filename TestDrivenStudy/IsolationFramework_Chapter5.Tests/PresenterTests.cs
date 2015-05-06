@@ -25,6 +25,7 @@ namespace IsolationFramework_Chapter5.Tests
             mocks.VerifyAll();
 
         }
+
         [TestMethod]
         public void TriggerAndVerifyRespondingToEvents()
         {
@@ -41,6 +42,41 @@ namespace IsolationFramework_Chapter5.Tests
             eventer.Raise(null, EventArgs.Empty);
 
             mocks.Verify(serviceMock);
+        }
+        
+        /// <summary>
+        /// 기록 및 재생(Record-and-Replay) 방식
+        /// </summary>
+        [TestMethod]
+        public void CreateMock_WithReplayAll()
+        {
+            MockRepository mockEngine = new MockRepository();
+
+            IWebService simulatedService = mockEngine.DynamicMock<IWebService>();
+            using(mockEngine.Record())
+            {
+                simulatedService.LogError("파일명이 너무 짧음:abc.ext");
+            }
+            LogAnalyzer log = new LogAnalyzer(simulatedService);
+            string tooShortFileName = "abc.ext";
+            log.Analyze(tooShortFileName);
+            mockEngine.Verify(simulatedService);
+        }
+
+        /// <summary>
+        /// 준비-작용-assert (AAA:Areange-Act-Assert) 문법으로 작성
+        /// </summary>
+        [TestMethod]
+        public void CreateMock_WithReplayAll_AAA()
+        {
+            MockRepository mockEngine = new MockRepository();
+            IWebService simualtedService = mockEngine.DynamicMock<IWebService>();
+            LogAnalyzer log = new LogAnalyzer(simualtedService);
+
+            mockEngine.ReplayAll();
+            log.Analyze("abc.ext");
+
+            simualtedService.AssertWasCalled(svc => svc.LogError("파일명이 너무 짧음:abc.ext"));
         }
     }
 }
