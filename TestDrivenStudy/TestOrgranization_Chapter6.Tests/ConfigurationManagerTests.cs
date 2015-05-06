@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestOrgranization_Chapter6.Tests
 {
     [TestClass]
-    public class ConfigurationManagerTests
+    public class ConfigurationManagerTests : BaseTestClass
     {
         [TestMethod]
         public void Analyze_Empty_ThrowsException()

@@ -4,14 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestOrgranization_Chapter6.Tests
 {
     [TestClass]
-    public class LogAnalyzerTests
+    public class LogAnalyzerTests : BaseTestClass
     {
-        [TestInitialize]
-        public void SetUp()
-        {
-            LoggingFacility.Logger = new StubLogger();
-        }
-
         [TestMethod]
         public void Anlyze_EmptyFile_ThrowsException()
         {
